@@ -13,7 +13,7 @@ class TurmaModel extends Model{
 
     function getTurma($escola){
         $builder = $this->db->table('CAD_TURMA AS A');
-        $builder->select('B.ANO_LETIVO, ID_TURMA, ETAPA, QTD_VAGAS, NOME_TURMA, TIPO_ATENDIMENTO, ENTRADA, SAIDA, C.NOME_PROFISSIONAL AS PROFESSOR');
+        $builder->select('B.NOME_LOTE, ID_TURMA, ETAPA, QTD_VAGAS, NOME_TURMA, TIPO_ATENDIMENTO, ENTRADA, SAIDA, "" AS PROFESSOR');
         $builder->join('CAD_ANO_LETIVO AS B','A.FK_ID_ANO_LETIVO = B.ID_ANO_LETIVO', 'JOIN');
         $builder->join('CAD_PROFISSIONAL AS C','A.FK_ID_PROFISSIONAL = C.ID_PROFISSIONAL', 'LEFT');
         $builder->where('A.FK_ID_ESCOLA', $escola);

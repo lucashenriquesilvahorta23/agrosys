@@ -16,7 +16,6 @@
           <a href="#">
             <span>Usuário: <?php $this->session = \Config\Services::session();
         $this->usuario = $this->session->get('dadoslogin'); echo $this->usuario->NOME;?></span><br>
-            <span>Perfil: <?php echo cargo($this->usuario->TIPO);?></span><br><br>
             <span><?php setlocale(LC_TIME, 'pt_BR.UTF-8'); echo strftime('%A, %d de %B de %Y');?></span><br><br>
           </a>
         </li>

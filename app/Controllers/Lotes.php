@@ -9,7 +9,7 @@ use Psr\Log\LoggerInterface;
 use App\Libraries\Auth;
 use \DateTime;
 
-class AnoLetivo extends BaseController
+class Lotes extends BaseController
 {
     public function initController(
         RequestInterface $request,
@@ -62,70 +62,37 @@ class AnoLetivo extends BaseController
         $dados = array();
         $id = $this->request->getPost('anoLetivo_id');
         if($id == ""){
-            $dados['ANO_LETIVO'] = $this->request->getPost('ano_letivo');
-            $dados['DATA_INICIAL'] = $this->request->getPost('data_inicial');
-            $dados['DATA_FINAL'] = $this->request->getPost('data_final');
-            $dados['DATA_INICIAL_MATRICULA'] = $this->request->getPost('data_inicial_matricula');
-            $dados['DATA_FINAL_MATRICULA'] = $this->request->getPost('data_final_matricula');
+
+            $dados['NOME_LOTE'] = $this->request->getPost('nome_lote');
+            $dados['TIPO_LOTE'] = $this->request->getPost('tipo_lote');
+            $dados['NUMERO_ANIMAIS'] = $this->request->getPost('numero_animais');
+            $dados['STATUS'] = $this->request->getPost('status');
+            $dados['LOCALIZACAO'] = $this->request->getPost('localizacao');
+            $dados['DATA_CADASTRO'] = $this->request->getPost('data_cadastro');
+            $dados['OBSERVACOES'] = $this->request->getPost('observacoes');
             $dados['FK_ID_ESCOLA'] = $this->escola->ID_ESCOLA;
 
             $insert_id = $this->anoLetivoModel->setAnoLetivo($dados);
 
-            $this->anoLetivoModel->deleteDatas($insert_id);
-        
-            $descricao_data = $this->request->getPost('descricao_data');
-            $data_especifica = $this->request->getPost('data_especifica');
-            $cor = $this->request->getPost('cor');
-
-
-            if($descricao_data != NULL && $descricao_data != ""){
-
-                for($x=0; $x<count($descricao_data); $x++){
-                    $dados_dependentes['FK_ID_ANO_LETIVO'] = $insert_id;  
-                    $dados_dependentes['DESCRICAO_DATA'] = $descricao_data[$x];  
-                    $dados_dependentes['DATA'] = $data_especifica[$x];  
-                    $dados_dependentes['COR_CALENDARIO'] = $cor[$x];  
-
-                    $this->anoLetivoModel->setDatas($dados_dependentes);
-                }
-            }
-
-
             if($insert_id){
-                return redirect()->to('/AnoLetivo/index?tipo_msg=sucesso&msg=Ação realizada!');
+                return redirect()->to('/Lotes/index?tipo_msg=sucesso&msg=Ação realizada!');
             }else{
-                return redirect()->to('/AnoLetivo/index?tipo_msg=erro&msg=Erro ao realizar ação!');
+                return redirect()->to('/Lotes/index?tipo_msg=erro&msg=Erro ao realizar ação!');
             }
         }else{
             $dados['ID_ANO_LETIVO'] = $this->request->getPost('anoLetivo_id');
-            $dados['ANO_LETIVO'] = $this->request->getPost('ano_letivo');
-            $dados['DATA_INICIAL'] = $this->request->getPost('data_inicial');
-            $dados['DATA_FINAL'] = $this->request->getPost('data_final');
-            $dados['DATA_INICIAL_MATRICULA'] = $this->request->getPost('data_inicial_matricula');
-            $dados['DATA_FINAL_MATRICULA'] = $this->request->getPost('data_final_matricula');
-
-            $this->anoLetivoModel->deleteDatas($this->request->getPost('anoLetivo_id'));
-        
-            $descricao_data = $this->request->getPost('descricao_data');
-            $data_especifica = $this->request->getPost('data_especifica');
-            $cor = $this->request->getPost('cor');
-
-            if($descricao_data != NULL && $descricao_data != ""){
-
-                for($x=0; $x<count($descricao_data); $x++){
-                    $dados_dependentes['FK_ID_ANO_LETIVO'] = $this->request->getPost('anoLetivo_id');  
-                    $dados_dependentes['DESCRICAO_DATA'] = $descricao_data[$x];  
-                    $dados_dependentes['DATA'] = $data_especifica[$x];  
-                    $dados_dependentes['COR_CALENDARIO'] = $cor[$x];  
-
-                    $this->anoLetivoModel->setDatas($dados_dependentes);
-                }
-            }
+            $dados['NOME_LOTE'] = $this->request->getPost('nome_lote');
+            $dados['TIPO_LOTE'] = $this->request->getPost('tipo_lote');
+            $dados['NUMERO_ANIMAIS'] = $this->request->getPost('numero_animais');
+            $dados['STATUS'] = $this->request->getPost('status');
+            $dados['LOCALIZACAO'] = $this->request->getPost('localizacao');
+            $dados['DATA_CADASTRO'] = $this->request->getPost('data_cadastro');
+            $dados['OBSERVACOES'] = $this->request->getPost('observacoes');
             
             if($this->anoLetivoModel->updateAnoLetivo($dados)){
-                return redirect()->to('/AnoLetivo/index?tipo_msg=sucesso&msg=Ação realizada!');
+                return redirect()->to('/Lotes/index?tipo_msg=sucesso&msg=Ação realizada!');
             }else{
-                return redirect()->to('/AnoLetivo/index?tipo_msg=erro&msg=Erro ao realizar ação!');
+                return redirect()->to('/Lotes/index?tipo_msg=erro&msg=Erro ao realizar ação!');
             }
 
         }
@@ -134,7 +101,6 @@ class AnoLetivo extends BaseController
     public function Editar($id=""){
         if($this->auth->checkAuth(11)){
             $dados['anoLetivo'] = $this->anoLetivoModel->getAnoLetivoID(base64_decode($id));
-            $dados['datas_especificas'] = $this->anoLetivoModel->getDatasAnoLetivoID(base64_decode($id));
             echo view('commons/header');
             echo view('commons/navbartop');
             echo view('commons/navbarleft', getBarMenu($this->usuario));
@@ -148,9 +114,9 @@ class AnoLetivo extends BaseController
     public function Excluir($id=""){
         if($this->auth->checkAuth(12)){
             if($this->anoLetivoModel->deleteAnoLetivo(base64_decode($id))){
-                return redirect()->to('/AnoLetivo/index?tipo_msg=sucesso&msg=Ação realizada!');
+                return redirect()->to('/Lotes/index?tipo_msg=sucesso&msg=Ação realizada!');
             }else{
-                return redirect()->to('/AnoLetivo/index?tipo_msg=erro&msg=Erro ao realizar ação!');
+                return redirect()->to('/Lotes/index?tipo_msg=erro&msg=Erro ao realizar ação!');
             }
         }else{
             return redirect()->to('/Acesso');

@@ -59,20 +59,6 @@
                                         </div>
 						            </div>
                                 </div>
-                                <div class="col-md-2">						
-						            <div class="form-group">
-                                        <label>Tipo<span class="text-danger">*</span></label>
-                                        <div class="controls">
-                                            <select name="usuario_tipo" id="usuario_tipo" required class="form-control">
-                                                <option value="AD" <?php if(isset($usuario->TIPO) && $usuario->TIPO == 'AD'){echo 'selected';}?>>Administrador</option>
-                                                <option value="PR" <?php if(isset($usuario->TIPO) && $usuario->TIPO == 'PR'){echo 'selected';}?>>Comum</option>
-                                                <option value="GT" <?php if(isset($usuario->TIPO) && $usuario->TIPO == 'GT'){echo 'selected';}?>>Gestão</option>
-                                                <option value="AM" <?php if(isset($usuario->TIPO) && $usuario->TIPO == 'AM'){echo 'selected';}?>>Administrativo</option>
-                                                <option value="PF" <?php if(isset($usuario->TIPO) && $usuario->TIPO == 'PF'){echo 'selected';}?>>Professor</option>
-                                            </select> 
-                                        </div>
-						            </div>
-                                </div>
                             </div>
                             <div class="row">
 					            <div class="col-md-4">						
@@ -90,21 +76,6 @@
                                             <input type="text" name="usuario_telefone" id="usuario_telefone" class="form-control telefone" required minlength="11" value="<?php echo isset($usuario->TELEFONE) ? $usuario->TELEFONE : '';?>"> 
                                         </div>
 						            </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>Profisisonal </label>
-                                        <select id="profissional_cargo" name="profissional_cargo" class="form-control">
-                                            <option value="">Escolha um profisisonal</option>
-                                            <?php
-
-                                                foreach($professores as $professor) {
-                                                    $selected = (isset($usuario->FK_ID_PROFISSIONAL) && $usuario->FK_ID_PROFISSIONAL == $professor->ID_PROFISSIONAL) ? 'selected' : '';
-                                                    echo "<option value='$professor->ID_PROFISSIONAL' $selected>$professor->NOME_PROFISSIONAL</option>";
-                                                }
-                                            ?>
-                                        </select>
-                                    </div>
                                 </div>
                             </div>
                             <?php

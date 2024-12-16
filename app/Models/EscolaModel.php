@@ -57,7 +57,7 @@ class EscolaModel extends Model {
                              ->getCompiledSelect();
 
         $builder = $this->db->table('CAD_ESCOLA');
-        $builder->select('ID_ESCOLA, ESCOLA');
+        $builder->select('ID_ESCOLA, NOME AS ESCOLA');
         $builder->where("ID_ESCOLA IN ($subquery)", null, false);
 
         return $builder->get()->getResult();

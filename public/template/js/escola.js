@@ -808,10 +808,10 @@ window.onload = function () {
     },
     dataType: 'json',
     success: function (data) {
-      var select = $('#profissional_escola');
+      var select = $('#profissional_fazenda');
       select.empty(); // Limpa as opções existentes
 
-      select.append('<option value="">Selecione uma escola</option>'); // Adiciona a opção padrão
+      select.append('<option value="">Selecione uma fazenda</option>'); // Adiciona a opção padrão
 
       // Percorre o array de escolas retornado e adiciona cada uma ao select
       $.each(data, function (index, escola) {

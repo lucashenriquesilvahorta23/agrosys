@@ -3,12 +3,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-globe"></i> Escolas
+        <i class="fa fa-globe"></i> Fazendas
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
         <li class="breadcrumb-item"><a href="#">Escolas</a></li>
-        <li class="breadcrumb-item active">Listagem</li>
+        <li class="breadcrumb-item active">Fazendas</li>
       </ol>
     </section>
 
@@ -19,10 +19,10 @@
             <div class="col-12">         
                 <div class="box">
                     <div class="box-header with-border">
-                    <h3 class="box-title">Escolas</h3>
+                    <h3 class="box-title">Fazendas</h3>
                     <div class="box-controls pull-right">
                         <!-- <button id="row-remove" class="btn btn-xs btn-danger">Delete selected row</button> -->
-                        <a href="/Escola/Inserir"><button class="btn btn-md btn-info"><i class="fa fa-plus"></i> Novo</button></a>
+                        <a href="/Fazendas/Inserir"><button class="btn btn-md btn-info"><i class="fa fa-plus"></i> Novo</button></a>
                     </div>
                     </div>
                     <!-- /.box-header -->
@@ -32,10 +32,7 @@
                             <thead>
                                 <tr>
                                     <th>Ações</th>
-                                    <th>Escola</th>
-                                    <th>INEP</th>
-                                    <th>Telefone</th>
-                                    <th>Cidade</th>
+                                    <th>Fazendas</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -44,20 +41,14 @@
                                         foreach ($resultados as $resultado) {
                                             echo '<tr>';
                                                 echo '	<td align="center">';				
-                                                echo '		<a href="/Escola/Editar/'.base64_encode($resultado->ID_ESCOLA).'" >';
+                                                echo '		<a href="/Fazendas/Editar/'.base64_encode($resultado->ID_ESCOLA).'" >';
                                                 echo '<button class="btn btn-success btn-sm" title="Editar informações"><i class="fa fa-edit "></i></button>';
                                                 echo '		</a>';
-                                                echo '		<a href="/Escola/Excluir/'.base64_encode($resultado->ID_ESCOLA).'" onclick="return confirm(\'Deseja continuar?\')">';
+                                                echo '		<a href="/Fazendas/Excluir/'.base64_encode($resultado->ID_ESCOLA).'" onclick="return confirm(\'Deseja continuar?\')">';
                                                 echo '<button class="btn btn-warning btn-sm" title="Editar informações"><i class="fa fa-trash "></i></button>';
                                                 echo '		</a>';
-                                                echo '		<a href="/Escola/Foto/'.base64_encode($resultado->ID_ESCOLA).'"">';
-                                                echo '<button class="btn btn-primary btn-sm" title="Anexos"><i class="fa fa-file "></i></button>';
-                                                echo '		</a>';
                                                 echo '	</td>';
-                                                echo '	<td>'.$resultado->ESCOLA.'</td>';
-                                                echo '	<td>'.$resultado->INEP.'</td>';
-                                                echo '	<td>'.$resultado->TELEFONE.'</td>';
-                                                echo '	<td>'.$resultado->MUNICIPIO.'</td>';
+                                                echo '	<td>'.$resultado->NOME.'</td>';
                                             echo '</tr>';
                                         }
                                     }

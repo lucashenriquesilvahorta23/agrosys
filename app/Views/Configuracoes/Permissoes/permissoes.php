@@ -62,35 +62,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <h5>Escola</h5>
+                                            <h5>Fazenda</h5>
                                             <div class="controls">
                                                 <select name="profissional_escola" id="profissional_escola" class="form-control select2">
-                                                    <option value="">Selecione uma escola</option>
+                                                    <option value="">Selecione uma fazenda</option>
                                                     <?php 
                                                         foreach ($escolas as $escola) {
-                                                            echo "<option value=".$escola->ID_ESCOLA.">".$escola->ESCOLA."</option>";
+                                                            echo "<option value=".$escola->ID_ESCOLA.">".$escola->NOME."</option>";
                                                         }
                                                     ?>
                                                 </select>
-                                                <div class="help-block">Selecione uma escola</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <h5>Perfil</h5>
-                                            <div class="controls">
-                                                <select name="permissoes_perfil" id="permissoes_perfil" class="form-control select2">
-                                                    <option value="">Selecione um perfil</option>
-                                                    <?php 
-                                                        foreach ($perfis as $perfil) {
-                                                            echo "<option value=".$perfil->ID_PERFIL.">".$perfil->DESCRICAO."</option>";
-                                                        }
-                                                    ?>
-                                                </select>
-                                                <div class="help-block">Selecione um perfil para permissões pré-selecionados</div>
+                                                <div class="help-block">Selecione uma fazenda</div>
                                             </div>
                                         </div>
                                     </div>
@@ -111,45 +93,6 @@
                                                     </div>
                                                     <div class="box-body">
                                                         <div class="myadmin-dd">
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#profissao" aria-expanded="false" aria-controls="profissao"><i class="fa fa-plus"></i> Profisssão</div>
-                                                                    <ol class="dd-list controls collapse" id="profissao" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="profissaos_chk_cons" value="31" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="profissaos_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="profissao_chk_ins" value="32" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="profissao_chk_ins">Inserir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="profissao_chk_edt" value="33" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="profissao_chk_edt">Editar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="profissao_chk_exc" value="34" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="profissao_chk_exc">Excluir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
                                                             <ol class="dd-list">
                                                                 <li class="dd-item">
                                                                     <div class="dd-handle collapsed" data-toggle="collapse" data-target="#usuario" aria-expanded="false" aria-controls="usuario"><i class="fa fa-plus"></i> Usuários</div>
@@ -204,36 +147,6 @@
                                                                     </ol>
                                                                 </li>
                                                             </ol>
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#perfil" aria-expanded="false" aria-controls="perfil"><i class="fa fa-plus"></i> Perfil</div>
-                                                                    <ol class="dd-list controls collapse" id="perfil" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="perfil_chk_cons" value="7" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="perfil_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#senha" aria-expanded="false" aria-controls="senha"><i class="fa fa-plus"></i> Alterar Senha</div>
-                                                                    <ol class="dd-list controls collapse" id="senha" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="senha_chk_cons" value="52" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="senha_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
                                                         </div>
                                                     </div>
                                                 </div> 
@@ -242,13 +155,13 @@
                                             <!-- Default box -->
                                                 <div class="box">
                                                     <div class="box-header with-border">
-                                                        <h4 class="box-title">Escola</h4>
+                                                        <h4 class="box-title">Fazenda</h4>
                                                     </div>
                                                     <div class="box-body">
                                                         <div class="myadmin-dd">
                                                             <ol class="dd-list">
                                                                 <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#escola" aria-expanded="false" aria-controls="escola"><i class="fa fa-plus"></i> Escola</div>
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#escola" aria-expanded="false" aria-controls="escola"><i class="fa fa-plus"></i> Fazenda</div>
                                                                     <ol class="dd-list controls collapse" id="escola" aria-expanded="false" class="collapse">
                                                                         <li class="dd-item">
                                                                             <div class="dd-handle collapsed">
@@ -293,13 +206,13 @@
                                             <!-- Default box -->
                                                 <div class="box">
                                                     <div class="box-header with-border">
-                                                        <h4 class="box-title">Ano</h4>
+                                                        <h4 class="box-title">Lotes</h4>
                                                     </div>
                                                     <div class="box-body">
                                                         <div class="myadmin-dd">
                                                             <ol class="dd-list">
                                                                 <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#ano" aria-expanded="false" aria-controls="ano"><i class="fa fa-plus"></i> Ano</div>
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#ano" aria-expanded="false" aria-controls="ano"><i class="fa fa-plus"></i> Lotes</div>
                                                                     <ol class="dd-list controls collapse" id="ano" aria-expanded="false" class="collapse">
                                                                         <li class="dd-item">
                                                                             <div class="dd-handle collapsed">
@@ -346,64 +259,13 @@
                                             <!-- Default box -->
                                                 <div class="box">
                                                     <div class="box-header with-border">
-                                                        <h4 class="box-title">Turmas</h4>
+                                                        <h4 class="box-title">Animais</h4>
                                                     </div>
                                                     <div class="box-body">
                                                         <div class="myadmin-dd">
                                                             <ol class="dd-list">
                                                                 <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#Turmas" aria-expanded="false" aria-controls="Turmas"><i class="fa fa-plus"></i> Turmas</div>
-                                                                    <ol class="dd-list controls collapse" id="Turmas" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Turmas_chk_cons" value="13" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Turmas_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Turmas_chk_ins" value="14" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Turmas_chk_ins">Inserir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Turmas_chk_edt" value="15" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Turmas_chk_edt">Editar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Turmas_chk_exc" value="16" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Turmas_chk_exc">Excluir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                            <div class="col-md-4">
-                                            <!-- Default box -->
-                                                <div class="box">
-                                                    <div class="box-header with-border">
-                                                        <h4 class="box-title">Profissionais</h4>
-                                                    </div>
-                                                    <div class="box-body">
-                                                        <div class="myadmin-dd">
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#Profissionais" aria-expanded="false" aria-controls="Profissionais"><i class="fa fa-plus"></i> Profissionais</div>
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#Profissionais" aria-expanded="false" aria-controls="Profissionais"><i class="fa fa-plus"></i> Animais</div>
                                                                     <ol class="dd-list controls collapse" id="Profissionais" aria-expanded="false" class="collapse">
                                                                         <li class="dd-item">
                                                                             <div class="dd-handle collapsed">
@@ -444,426 +306,7 @@
                                                     </div>
                                                 </div> 
                                             </div>
-                                            <div class="col-md-4">
-                                            <!-- Default box -->
-                                                <div class="box">
-                                                    <div class="box-header with-border">
-                                                        <h4 class="box-title">Alunos</h4>
-                                                    </div>
-                                                    <div class="box-body">
-                                                        <div class="myadmin-dd">
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#Alunos" aria-expanded="false" aria-controls="Alunos"><i class="fa fa-plus"></i> Alunos</div>
-                                                                    <ol class="dd-list controls collapse" id="Alunos" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_cons" value="25" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_ins" value="26" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_ins">Inserir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_edt" value="27" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_edt">Editar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_exc" value="28" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_exc">Excluir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_vinc" value="29" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_vinc">Vinculo</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="Alunos_chk_conc" value="30" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="Alunos_chk_conc">Concluir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                            <div class="col-md-4">
-                                            <!-- Default box -->
-                                                <div class="box">
-                                                    <div class="box-header with-border">
-                                                        <h4 class="box-title">Ocorrências</h4>
-                                                    </div>
-                                                    <div class="box-body">
-                                                        <div class="myadmin-dd">
-                                                            <ol class="dd-list">
-                                                                <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#ocorrencia" aria-expanded="false" aria-controls="ocorrencia"><i class="fa fa-plus"></i> Ocorrências</div>
-                                                                    <ol class="dd-list controls collapse" id="ocorrencia" aria-expanded="false" class="collapse">
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="ocorrencia_chk_cons" value="57" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="ocorrencia_chk_cons">Consultar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="ocorrencia_chk_ins" value="56" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="ocorrencia_chk_ins">Inserir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="ocorrencia_chk_edt" value="54" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="ocorrencia_chk_edt">Editar</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="dd-item">
-                                                                            <div class="dd-handle collapsed">
-                                                                                <fieldset>
-                                                                                    <input type="checkbox" id="ocorrencia_chk_exc" value="53" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="ocorrencia_chk_exc">Excluir</label>
-                                                                                </fieldset>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ol>
-                                                                </li>
-                                                            </ol>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </div>
-                                            <div class="col-md-4">
-                                            <!-- Default box -->
-                                                <div class="box">
-                                                    <div class="box-header with-border">
-                                                        <h4 class="box-title">Relatórios</h4>
-                                                    </div>
-                                                    <div class="box-body">
-                                                        <div class="myadmin-dd">
-                                                        <ol class="dd-list">
-                                                            <!-- Documento: Ata de Resultados Finais -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#ataresultados" aria-expanded="false" aria-controls="ataresultados">
-                                                                    <i class="fa fa-plus"></i> Ata de Resultados Finais
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="ataresultados" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="ataresultados_chk_cons" value="35" class="checkboxes" name="checkperm[]">
-                                                                                <label for="ataresultados_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-                                                            
-                                                            <!-- Documento: Declaração de Conclusão -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#declaracaoConclusao" aria-expanded="false" aria-controls="declaracaoConclusao">
-                                                                    <i class="fa fa-plus"></i> Declaração de Conclusão
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="declaracaoConclusao" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="declaracaoConclusao_chk_cons" value="36" class="checkboxes" name="checkperm[]">
-                                                                                <label for="declaracaoConclusao_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Declaração de Frequência -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#declaracaoFrequencia" aria-expanded="false" aria-controls="declaracaoFrequencia">
-                                                                    <i class="fa fa-plus"></i> Declaração de Frequência
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="declaracaoFrequencia" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="declaracaoFrequencia_chk_cons" value="37" class="checkboxes" name="checkperm[]">
-                                                                                <label for="declaracaoFrequencia_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Declaração para Transferência em Curso -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#declaracaoTransferencia" aria-expanded="false" aria-controls="declaracaoTransferencia">
-                                                                    <i class="fa fa-plus"></i> Declaração para Transferência em Curso
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="declaracaoTransferencia" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="declaracaoTransferencia_chk_cons" value="38" class="checkboxes" name="checkperm[]">
-                                                                                <label for="declaracaoTransferencia_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Encaminhamento NIS -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#encaminhamentoNIS" aria-expanded="false" aria-controls="encaminhamentoNIS">
-                                                                    <i class="fa fa-plus"></i> Encaminhamento NIS
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="encaminhamentoNIS" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="encaminhamentoNIS_chk_cons" value="39" class="checkboxes" name="checkperm[]">
-                                                                                <label for="encaminhamentoNIS_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Ficha de Diagnóstico de Alunos com Patologias Específicas -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#fichaDiagnostico" aria-expanded="false" aria-controls="fichaDiagnostico">
-                                                                    <i class="fa fa-plus"></i> Ficha de Diagnóstico de Alunos com Patologias Específicas
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="fichaDiagnostico" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="fichaDiagnostico_chk_cons" value="40" class="checkboxes" name="checkperm[]">
-                                                                                <label for="fichaDiagnostico_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Ficha de Matrícula -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#fichaMatricula" aria-expanded="false" aria-controls="fichaMatricula">
-                                                                    <i class="fa fa-plus"></i> Ficha do Aluno
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="fichaMatricula" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="fichaMatricula_chk_cons" value="41" class="checkboxes" name="checkperm[]">
-                                                                                <label for="fichaMatricula_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Registro das Vivências Desenvolvidas -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#registroVivencias" aria-expanded="false" aria-controls="registroVivencias">
-                                                                    <i class="fa fa-plus"></i> Registro das Vivências Desenvolvidas
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="registroVivencias" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="registroVivencias_chk_cons" value="42" class="checkboxes" name="checkperm[]">
-                                                                                <label for="registroVivencias_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Aluno por Turma -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioAlunoTurma" aria-expanded="false" aria-controls="relatorioAlunoTurma">
-                                                                    <i class="fa fa-plus"></i> Relatório de Aluno por Turma
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioAlunoTurma" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioAlunoTurma_chk_cons" value="43" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioAlunoTurma_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Alunos com Patologias Específicas -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioAlunosPatologias" aria-expanded="false" aria-controls="relatorioAlunosPatologias">
-                                                                    <i class="fa fa-plus"></i> Relatório de Alunos com Patologias Específicas
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioAlunosPatologias" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioAlunosPatologias_chk_cons" value="44" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioAlunosPatologias_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Alunos -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioAlunos" aria-expanded="false" aria-controls="relatorioAlunos">
-                                                                    <i class="fa fa-plus"></i> Relatório de Alunos
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioAlunos" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioAlunos_chk_cons" value="45" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioAlunos_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Frequência -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioFrequencia" aria-expanded="false" aria-controls="relatorioFrequencia">
-                                                                    <i class="fa fa-plus"></i> Relatório de Frequência
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioFrequencia" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioFrequencia_chk_cons" value="46" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioFrequencia_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Ocorrências -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioOcorrencias" aria-expanded="false" aria-controls="relatorioOcorrencias">
-                                                                    <i class="fa fa-plus"></i> Relatório de Ocorrências
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioOcorrencias" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioOcorrencias_chk_cons" value="47" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioOcorrencias_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Profissionais -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioProfissionais" aria-expanded="false" aria-controls="relatorioProfissionais">
-                                                                    <i class="fa fa-plus"></i> Relatório de Profissionais
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioProfissionais" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioProfissionais_chk_cons" value="48" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioProfissionais_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Relatório de Turmas -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#relatorioTurmas" aria-expanded="false" aria-controls="relatorioTurmas">
-                                                                    <i class="fa fa-plus"></i> Relatório de Turmas
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="relatorioTurmas" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="relatorioTurmas_chk_cons" value="49" class="checkboxes" name="checkperm[]">
-                                                                                <label for="relatorioTurmas_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Termo de Autorização para Uso de Imagem -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#termoAutorizacaoImagem" aria-expanded="false" aria-controls="termoAutorizacaoImagem">
-                                                                    <i class="fa fa-plus"></i> Termo de Autorização para Uso de Imagem
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="termoAutorizacaoImagem" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="termoAutorizacaoImagem_chk_cons" value="50" class="checkboxes" name="checkperm[]">
-                                                                                <label for="termoAutorizacaoImagem_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-
-                                                            <!-- Documento: Termo de Compromisso -->
-                                                            <li class="dd-item">
-                                                                <div class="dd-handle collapsed" data-toggle="collapse" data-target="#termoCompromisso" aria-expanded="false" aria-controls="termoCompromisso">
-                                                                    <i class="fa fa-plus"></i> Termo de Compromisso
-                                                                </div>
-                                                                <ol class="dd-list controls collapse" id="termoCompromisso" aria-expanded="false" class="collapse">
-                                                                    <li class="dd-item">
-                                                                        <div class="dd-handle collapsed">
-                                                                            <fieldset>
-                                                                                <input type="checkbox" id="termoCompromisso_chk_cons" value="51" class="checkboxes" name="checkperm[]">
-                                                                                <label for="termoCompromisso_chk_cons">Consultar</label>
-                                                                            </fieldset>
-                                                                        </div>
-                                                                    </li>
-                                                                </ol>
-                                                            </li>
-                                                        </ol>
-                                                        </div>
-                                                    </div>
-                                                </div> 
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

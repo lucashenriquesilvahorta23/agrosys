@@ -13,36 +13,11 @@ class ProfissionalModel extends Model{
 
     function getProfissional($situacao, $cargo){
         $builder = $this->db->table('CAD_PROFISSIONAL AS A');
-        $builder->select('B.NOME AS PROFISSAO, A.*');
-        $builder->join('CAD_PROFISSAO AS B','A.CARGO = B.ID_PROFISSAO', 'LEFT');
-        if($cargo != ""){
-            $builder->where('A.CARGO', $cargo);
-        }
-        if($situacao != ""){
-            if($situacao != "A"){
-                $builder->where('A.DATA_DESLIGAMENTO !=', 0000-00-00);
-            }else{
-                $builder->where('A.DATA_DESLIGAMENTO', 0000-00-00);
-            }
-        }
         return $builder->get()->getResult();
     }
 
     function getProfissionalEscola($idEscola, $situacao, $cargo){
         $builder = $this->db->table('CAD_PROFISSIONAL AS A');
-        $builder->select('B.NOME AS PROFISSAO, A.*');
-        $builder->join('CAD_PROFISSAO AS B','A.CARGO = B.ID_PROFISSAO', 'LEFT');
-        $builder->where('A.FK_ID_ESCOLA', $idEscola);
-        if($cargo != ""){
-            $builder->where('A.CARGO', $cargo);
-        }
-        if($situacao != ""){
-            if($situacao != "A"){
-                $builder->where('A.DATA_DESLIGAMENTO !=', 0000-00-00);
-            }else{
-                $builder->where('A.DATA_DESLIGAMENTO', 0000-00-00);
-            }
-        }
         return $builder->get()->getResult();
     }
 

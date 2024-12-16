@@ -74,7 +74,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text bg-danger border-danger"><i class="ti-world"></i></span>
 								</div>
-								<select required name="profissional_escola" id="profissional_escola" class="form-control select2">
+								<select required name="profissional_fazenda" id="profissional_fazenda" class="form-control select2">
 									<option value="">Selecione uma fazenda</option>
 								</select>
 							</div>

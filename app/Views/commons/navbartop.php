@@ -54,12 +54,12 @@
               <li style="line-height: 60px; font-size: 20px; display: flex; justify-content: center; align-items: center">
                 
                 
-              <p style="margin-top: 12px; margin-left: 30px" ><?php echo $this->escola->ESCOLA;?></p>
+              <p style="margin-top: 12px; margin-left: 30px" ><?php echo $this->escola->NOME;?></p>
               </li>
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <?php 
-                    if($this->escola->NOME_ALEATORIO != NULL && $this->escola->ESCOLA != ""){
+                    if(isset($this->escola->NOME_ALEATORIO)){
                       echo '<img  src="'.LINK_UPLOAD.$this->escola->NOME_ALEATORIO.'" class="user-image " alt="User Image">';
                     }else{
                       echo '<img src="/uploads/padrao.png" class="user-image " alt="User Image">';
@@ -67,19 +67,6 @@
                   ?>
                 </a>
                 <ul class="dropdown-menu scale-up">
-                  <!-- User image -->
-                  <li class="user-header">
-                    <?php 
-                      if($this->escola->NOME_ALEATORIO != NULL && $this->escola->ESCOLA != ""){
-                        echo '<img  style="width: 80px" src="'.LINK_UPLOAD.$this->escola->NOME_ALEATORIO.'" class="user-image " alt="User Image">';
-                      }else{
-                        echo '<img src="/uploads/padrao.png" class="user-image " alt="User Image">';
-                      }
-                    ?>
-                    <p>
-                      <?php echo $this->escola->ESCOLA;?>
-                    </p>
-                  </li>
                   <!-- Menu Body -->
                   <li class="user-body">
                     <div class="row no-gutters">

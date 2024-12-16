@@ -39,10 +39,10 @@ class Login extends BaseController
 	public function validaLogin(){
         $login = $this->usuarioModel->getInformacoesLogin(strtoupper($this->request->getPost('username')), sha1($this->request->getPost('password'))); //Verifica as informações de Login
         if(!empty($login)){	
-			$escola = $this->usuarioModel->getPermissaoEscola($login->ID_USUARIO, $this->request->getPost('profissional_escola'));
+			$escola = $this->usuarioModel->getPermissaoEscola($login->ID_USUARIO, $this->request->getPost('profissional_fazenda'));
 			if($escola->QTD > 0){
 				$dadosuser['dadoslogin'] = $login;
-				$info_escola = $this->escolaModel->getEscolaID($this->request->getPost('profissional_escola'));
+				$info_escola = $this->escolaModel->getEscolaID($this->request->getPost('profissional_fazenda'));
 				$dadosuser['escola'] = $info_escola;	
 				$this->session->set($dadosuser); //Se o login existir, seta as informações retornadas pela query em uma sessão.
 				/** SALVA LOG DE ACESSO */

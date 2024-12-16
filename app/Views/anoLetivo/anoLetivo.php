@@ -3,11 +3,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-calendar"></i> Ano letivo
+        <i class="fa fa-calendar"></i> Lote
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Ano letivo</a></li>
+        <li class="breadcrumb-item"><a href="#">Lote</a></li>
         <li class="breadcrumb-item active">Listagem</li>
       </ol>
     </section>
@@ -18,10 +18,10 @@
             <div class="col-12">         
                 <div class="box">
                     <div class="box-header with-border">
-                    <h3 class="box-title">Ano letivo</h3>
+                    <h3 class="box-title">Lote</h3>
                     <div class="box-controls pull-right">
                         <!-- <button id="row-remove" class="btn btn-xs btn-danger">Delete selected row</button> -->
-                        <a href="/AnoLetivo/Inserir"><button class="btn btn-md btn-info"><i class="fa fa-plus"></i> Novo</button></a>
+                        <a href="/Lotes/Inserir"><button class="btn btn-md btn-info"><i class="fa fa-plus"></i> Novo</button></a>
                     </div>
                     </div>
                     <!-- /.box-header -->
@@ -32,9 +32,8 @@
                                 <tr>
                                     <th>Ações</th>
                                     <th>ID</th>
-                                    <th>Ano</th>
-                                    <th>Inicio</th>
-                                    <th>Termino(Previsão)</th>
+                                    <th>Nome</th>
+                                    <th>Nº animais</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,17 +42,16 @@
                                         foreach ($resultados as $resultado) {
                                             echo '<tr>';
                                                 echo '	<td align="center">';				
-                                                echo '		<a href="/AnoLetivo/Editar/'.base64_encode($resultado->ID_ANO_LETIVO).'" >';
+                                                echo '		<a href="/Lotes/Editar/'.base64_encode($resultado->ID_ANO_LETIVO).'" >';
                                                 echo '<button class="btn btn-success btn-sm" title="Editar informações"><i class="fa fa-edit "></i></button>';
                                                 echo '		</a>';
-                                                echo '		<a href="/AnoLetivo/Excluir/'.base64_encode($resultado->ID_ANO_LETIVO).'" onclick="return confirm(\'Deseja continuar?\')">';
+                                                echo '		<a href="/Lotes/Excluir/'.base64_encode($resultado->ID_ANO_LETIVO).'" onclick="return confirm(\'Deseja continuar?\')">';
                                                 echo '<button class="btn btn-warning btn-sm" title="Editar informações"><i class="fa fa-trash "></i></button>';
                                                 echo '		</a>';
                                                 echo '	</td>';
                                                 echo '	<td>'.$resultado->ID_ANO_LETIVO.'</td>';
-                                                echo '	<td>'.$resultado->ANO_LETIVO.'</td>';
-                                                echo '	<td>'.inverterData($resultado->DATA_INICIAL).'</td>';
-                                                echo '	<td>'.inverterData($resultado->DATA_FINAL).'</td>';
+                                                echo '	<td>'.$resultado->NOME_LOTE.'</td>';
+                                                echo '	<td>'.$resultado->NUMERO_ANIMAIS.'</td>';
                                             echo '</tr>';
                                         }
                                     }

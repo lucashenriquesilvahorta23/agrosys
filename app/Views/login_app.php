@@ -93,7 +93,7 @@ html {
 						<div class="form-group">
 							<div class="input-group mb-3">
 								<select required name="fazenda" style="height: 50px" id="fazenda" class="form-control select2">
-									<option value="">Selecione uma escola</option>
+									<option value="">Selecione uma fazenda</option>
 								</select>
 							</div>
 						</div>
