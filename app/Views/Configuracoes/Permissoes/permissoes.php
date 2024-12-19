@@ -306,6 +306,35 @@
                                                     </div>
                                                 </div> 
                                             </div>
+
+
+                                            <div class="col-md-4">
+                                            <!-- Default box -->
+                                                <div class="box">
+                                                    <div class="box-header with-border">
+                                                        <h4 class="box-title">Procedimentos</h4>
+                                                    </div>
+                                                    <div class="box-body">
+                                                        <div class="myadmin-dd">
+                                                            <ol class="dd-list">
+                                                                <li class="dd-item">
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#procedimentos" aria-expanded="false" aria-controls="procedimentos"><i class="fa fa-plus"></i> Procedimentos</div>
+                                                                    <ol class="dd-list controls collapse" id="procedimentos" aria-expanded="false" class="collapse">
+                                                                        <li class="dd-item">
+                                                                            <div class="dd-handle collapsed">
+                                                                                <fieldset>
+                                                                                    <input type="checkbox" id="procedimentos_chk_cons" value="58" class="checkboxes" name="checkperm[]">
+                                                                                    <label for="procedimentos_chk_cons">Consultar</label>
+                                                                                </fieldset>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ol>
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
                                             
                                         </div>
                                     </div>
