@@ -126,43 +126,43 @@ $.ajax({
       chart.data = [{
             "name": data[0].identificacao_animal + " - R$ " + data[0].valor, // Primeiro animal
             "steps": parseFloat(data[0].peso) + "Kg", // Peso do primeiro animal
-            "href": "http://tst.agrosys.com.br/template/images/boi1.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi1.jpg"
         }, {
             "name": data[1].identificacao_animal + " - R$ " + data[1].valor, // Segundo animal
             "steps": parseFloat(data[1].peso) + "Kg", // Peso do segundo animal
-            "href": "http://tst.agrosys.com.br/template/images/boi2.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi2.jpg"
         }, {
             "name": data[2].identificacao_animal + " - R$ " + data[2].valor, // Terceiro animal
             "steps": parseFloat(data[2].peso) + "Kg", // Peso do terceiro animal
-            "href": "http://tst.agrosys.com.br/template/images/boi3.png"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi3.png"
         }, {
             "name": data[3].identificacao_animal + " - R$ " + data[3].valor, // Quarto animal
             "steps": parseFloat(data[3].peso) + "Kg", // Peso do quarto animal
-            "href": "http://tst.agrosys.com.br/template/images/boi4.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi4.jpg"
         }, {
             "name": data[4].identificacao_animal + " - R$ " + data[4].valor, // Quinto animal
             "steps": parseFloat(data[4].peso) + "Kg", // Peso do quinto animal
-            "href": "http://tst.agrosys.com.br/template/images/boi5.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi5.jpg"
         }, {
             "name": data[5].identificacao_animal + " - R$ " + data[5].valor, // Primeiro animal
             "steps": parseFloat(data[5].peso) + "Kg", // Peso do primeiro animal
-            "href": "http://tst.agrosys.com.br/template/images/boi1.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi1.jpg"
         }, {
             "name": data[6].identificacao_animal + " - R$ " + data[6].valor, // Segundo animal
             "steps": parseFloat(data[6].peso) + "Kg", // Peso do segundo animal
-            "href": "http://tst.agrosys.com.br/template/images/boi2.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi2.jpg"
         }, {
             "name": data[7].identificacao_animal + " - R$ " + data[7].valor, // Terceiro animal
             "steps": parseFloat(data[7].peso) + "Kg", // Peso do terceiro animal
-            "href": "http://tst.agrosys.com.br/template/images/boi3.png"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi3.png"
         }, {
             "name": data[8].identificacao_animal + " - R$ " + data[8].valor, // Quarto animal
             "steps": parseFloat(data[8].peso) + "Kg", // Peso do quarto animal
-            "href": "http://tst.agrosys.com.br/template/images/boi4.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi4.jpg"
         }, {
             "name": data[9].identificacao_animal + " - R$ " + data[9].valor, // Quinto animal
             "steps": parseFloat(data[9].peso) + "Kg", // Peso do quinto animal
-            "href": "http://tst.agrosys.com.br/template/images/boi5.jpg"
+            "href": "https://agrosys.cnsistemas.net/template/images/boi5.jpg"
         }];
 
 
