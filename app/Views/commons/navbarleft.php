@@ -21,7 +21,7 @@
         </li>
         <li class="<?php if(substr($_SERVER["REQUEST_URI"], 1) == 'Home'){echo 'active';}?>">
           <a href="/Home">
-            <i class="fa fa-home"></i> <span>Início</span>
+            <i class="fa fa-home"></i> <span>Dashbaord</span>
           </a>
         </li>
         <?php

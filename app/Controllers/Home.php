@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UsuarioModel;
 use App\Models\AlunoModel;
 use App\Models\TurmaModel;
+use App\Models\ProbLotesModel;
 use App\Models\ProfissionalModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\RequestInterface;
@@ -22,6 +23,7 @@ class Home extends BaseController
         $this->usuarioModel = new UsuarioModel();
         $this->alunoModel = new AlunoModel();
         $this->turmaModel = new TurmaModel();
+        $this->ProbLotesModel = new ProbLotesModel();
         $this->profissionalModel = new ProfissionalModel();
         $this->session = \Config\Services::session();
         $this->usuario = $this->session->get('dadoslogin');
@@ -59,4 +61,32 @@ class Home extends BaseController
         }
             
     }
+
+    public function getProblemasPorLote()
+    {
+        // Obtém problemas por lote
+        echo json_encode($this->ProbLotesModel->getProblemasPorLote());
+
+    }
+
+    public function getProblemasRecorrentes(){
+        echo json_encode($this->ProbLotesModel->getProblemasRecorrentes());
+
+    }
+
+    public function getMedicamentos(){
+        echo json_encode($this->ProbLotesModel->getMedicamentos());
+
+    }
+
+    public function getVacina(){
+        echo json_encode($this->ProbLotesModel->getVacina());
+
+    }
+
+
+    public function getAnimaisMaisPesadosPorProcedimento(){
+
+        echo json_encode($this->ProbLotesModel->getAnimaisMaisPesadosPorProcedimento());
+    } 
 }

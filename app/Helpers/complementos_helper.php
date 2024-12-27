@@ -262,6 +262,34 @@
         return $turmaModel->getAlunosChamadas($id_chamada);    
     }
 
+    function mostrarDados($id, $tipo){
+        $ProcLotesModel = new \App\Models\ProcLotesModel;
+        if($tipo == "vacinas"){
+            $dados = $ProcLotesModel->getDadosVacina($id);   
+            if($dados != null){
+                $resposta = ""; 
+                foreach ($dados as $dado) {
+                    $resposta .= $dado->nome.", ";
+                }
+    
+                // Remove a vírgula e o espaço final
+                return rtrim($resposta, ", ");
+            }   
+        }else{
+            $dados = $ProcLotesModel->getDadosMedicacao($id);   
+            if($dados != null){
+                $resposta = ""; 
+                foreach ($dados as $dado) {
+                    $resposta .= $dado->nome.", ";
+                }
+    
+                // Remove a vírgula e o espaço final
+                return rtrim($resposta, ", ");
+            } 
+        }
+    }
+    
+
     function turno($str){
         switch ($str) {
             case 'IN':

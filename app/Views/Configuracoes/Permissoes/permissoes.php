@@ -318,13 +318,52 @@
                                                         <div class="myadmin-dd">
                                                             <ol class="dd-list">
                                                                 <li class="dd-item">
-                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#procedimentos" aria-expanded="false" aria-controls="procedimentos"><i class="fa fa-plus"></i> Procedimentos</div>
-                                                                    <ol class="dd-list controls collapse" id="procedimentos" aria-expanded="false" class="collapse">
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#vendas" aria-expanded="false" aria-controls="vendas"><i class="fa fa-plus"></i> Vendas</div>
+                                                                    <ol class="dd-list controls collapse" id="vendas" aria-expanded="false" class="collapse">
                                                                         <li class="dd-item">
                                                                             <div class="dd-handle collapsed">
                                                                                 <fieldset>
-                                                                                    <input type="checkbox" id="procedimentos_chk_cons" value="58" class="checkboxes" name="checkperm[]">
-                                                                                    <label for="procedimentos_chk_cons">Consultar</label>
+                                                                                    <input type="checkbox" id="vendas_chk_cons" value="58" class="checkboxes" name="checkperm[]">
+                                                                                    <label for="vendas_chk_cons">Consultar</label>
+                                                                                </fieldset>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li class="dd-item">
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#compras" aria-expanded="false" aria-controls="compras"><i class="fa fa-plus"></i> Compras</div>
+                                                                    <ol class="dd-list controls collapse" id="compras" aria-expanded="false" class="collapse">
+                                                                        <li class="dd-item">
+                                                                            <div class="dd-handle collapsed">
+                                                                                <fieldset>
+                                                                                    <input type="checkbox" id="compras_chk_cons" value="59" class="checkboxes" name="checkperm[]">
+                                                                                    <label for="compras_chk_cons">Consultar</label>
+                                                                                </fieldse t>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li class="dd-item">
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#proclote" aria-expanded="false" aria-controls="proclote"><i class="fa fa-plus"></i> Procedimentos de lote</div>
+                                                                    <ol class="dd-list controls collapse" id="proclote" aria-expanded="false" class="collapse">
+                                                                        <li class="dd-item">
+                                                                            <div class="dd-handle collapsed">
+                                                                                <fieldset>
+                                                                                    <input type="checkbox" id="proclote_chk_cons" value="60" class="checkboxes" name="checkperm[]">
+                                                                                    <label for="proclote_chk_cons">Consultar</label>
+                                                                                </fieldset>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ol>
+                                                                </li>
+                                                                <li class="dd-item">
+                                                                    <div class="dd-handle collapsed" data-toggle="collapse" data-target="#probLote" aria-expanded="false" aria-controls="probLote"><i class="fa fa-plus"></i> Problemas de lote</div>
+                                                                    <ol class="dd-list controls collapse" id="probLote" aria-expanded="false" class="collapse">
+                                                                        <li class="dd-item">
+                                                                            <div class="dd-handle collapsed">
+                                                                                <fieldset>
+                                                                                    <input type="checkbox" id="probLote_chk_cons" value="61" class="checkboxes" name="checkperm[]">
+                                                                                    <label for="probLote_chk_cons">Consultar</label>
                                                                                 </fieldset>
                                                                             </div>
                                                                         </li>

@@ -168,4 +168,25 @@ class Animais extends BaseController
             return redirect()->to('/Acesso');
         }
     }
+
+    public function getPesoEDataPesagem(){
+
+        $identificacao = $this->request->getPost('identificacao');
+
+        echo json_encode($this->profissionalModel->getPesoEDataPesagem($identificacao));
+    } 
+
+    public function getVacinasAgrupadasPorProcedimento(){
+
+        $identificacao = $this->request->getPost('identificacao');
+
+        echo json_encode($this->profissionalModel->getVacinasAgrupadasPorProcedimento($identificacao));
+    } 
+
+    public function getMedicacoesAgrupadasPorProcedimento(){
+
+        $identificacao = $this->request->getPost('identificacao');
+
+        echo json_encode($this->profissionalModel->getMedicacoesAgrupadasPorProcedimento($identificacao));
+    } 
 }
